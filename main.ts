@@ -1,0 +1,53 @@
+finch.startFinch()
+basic.forever(function () {
+    if (input.buttonIsPressed(Button.A)) {
+        finch.setBeak(0, 100, 0)
+        finch.setTail(TailPort.All, 0, 100, 0)
+        basic.showLeds(`
+            # # . # #
+            # # . # #
+            . . # . .
+            # # # # #
+            # . . . #
+            `)
+        finch.setTurn(RLDir.Right, 35, 50)
+        finch.setTurn(RLDir.Left, 35, 50)
+        finch.setMove(MoveDir.Forward, 6, 50)
+        finch.setBeak(100, 0, 0)
+        music.playTone(262, music.beat(BeatFraction.Whole))
+        finch.setBeak(0, 100, 0)
+        music.playMelody("- - - - - - - - ", 450)
+        finch.setTail(TailPort.One, 100, 0, 0)
+        finch.setTurn(RLDir.Right, 35, 50)
+        finch.setTurn(RLDir.Left, 35, 50)
+        finch.setMove(MoveDir.Backward, 6, 50)
+        finch.setBeak(100, 0, 0)
+        music.playTone(523, music.beat(BeatFraction.Whole))
+        finch.setTail(TailPort.Two, 100, 0, 0)
+        music.playMelody("- - - - - - - - ", 450)
+        finch.setBeak(0, 100, 0)
+        finch.setTurn(RLDir.Right, 35, 50)
+        finch.setTurn(RLDir.Left, 35, 50)
+        finch.setMove(MoveDir.Forward, 6, 50)
+        finch.setBeak(100, 0, 0)
+        music.playTone(262, music.beat(BeatFraction.Whole))
+        finch.setBeak(0, 100, 0)
+        music.playMelody("- - - - - - - - ", 450)
+        finch.setTail(TailPort.Three, 100, 0, 0)
+        finch.setTurn(RLDir.Right, 35, 50)
+        finch.setTurn(RLDir.Left, 35, 50)
+        finch.setMove(MoveDir.Backward, 6, 50)
+        finch.setBeak(100, 0, 0)
+        music.playTone(523, music.beat(BeatFraction.Whole))
+        finch.setTail(TailPort.Four, 100, 0, 0)
+        music.playMelody("- - - - - - - - ", 450)
+        finch.setBeak(0, 100, 0)
+        finch.setTurn(RLDir.Right, 35, 50)
+        finch.setTurn(RLDir.Left, 35, 50)
+        finch.setMove(MoveDir.Forward, 6, 50)
+        finch.setBeak(100, 0, 0)
+        music.playTone(262, music.beat(BeatFraction.Whole))
+        finch.setBeak(0, 0, 0)
+        finch.setTail(TailPort.All, 0, 0, 0)
+    }
+})
